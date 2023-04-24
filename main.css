@@ -1,0 +1,169 @@
+/*able to control wrapping and content align*/
+#wrap {
+  max-width: 100%;
+  margin: 0 auto;
+}
+/*proper content sizing*/
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  color: whitesmoke;
+  text-align: center;
+  font-family: fantasy;
+  font-size: 70px;
+  border: 2px solid black;
+  background-image:url(https://image.shutterstock.com/image-vector/video-game-controller-background-gadgets-260nw-1177928209.jpg);
+  margin-top: 0px;
+}
+
+#navigation ul {
+  text-align: center;
+}
+
+#navigation ul li {
+  display: inline;
+  margin: 5%;
+}
+
+#navigation ul li a{
+  font-size: 20px;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+.storeItem {
+  padding-top: 2%;
+  border: 2px solid black;
+  margin: 2% 2%;
+}
+
+.start, .sale, .categories, .cart {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: fantasy;
+  color: white;
+  font-size: 30px;
+  text-shadow: 4px 4px 4px black;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  height: 60px;
+  text-align: center;
+}
+
+.start {
+  background-image: url("https://thumbs.dreamstime.com/z/gamepad-joystick-game-controller-seamless-pattern-devices-video-games-esports-gamer-black-background-hand-gamepad-joystick-148103898.jpg");
+}
+
+.sale {
+  background-image: url("https://www.fatrabbitcreative.com/images/blog/blog-videogames-2.png");
+}
+
+.cart {
+  background-image: url("https://media.istockphoto.com/vectors/gadget-icons-vector-seamless-pattern-hand-drawn-doodle-computer-game-vector-id983311996");
+}
+
+.categories {
+  background-image: url("https://media.istockphoto.com/vectors/digital-technology-gaming-abstract-background-vector-id1164222265?k=6&m=1164222265&s=612x612&w=0&h=gCQbzULLSkDkthcgBfTi_SJRNUGcjsic8OKZgl0uFAk=");
+}
+
+.allGames {
+  display: flex; /* used flex instead of unpredictable float*/
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: fit-content;
+}
+.allGames img {
+  width: 50%;
+}
+
+.item {
+  border: 2px solid black;
+  width: 32%;
+}
+
+.flex-conteiner
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+#back
+{
+  float: right;
+}
+
+#buy
+{
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+/*mobile*/
+@media only screen and (max-width: 600px)
+{
+  #wrap {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .allGames
+  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .item
+  {
+    width: 40%;
+  }
+
+  .flex-conteiner
+  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #navigation ul li {
+    margin: 1%;
+  }
+  
+  #navigation ul li a{
+    font-size: 16px;
+  }
+
+  h1 
+  {
+    font-size: 50px;
+  }
+}
+
+/*mini-screen card*/
+@media only screen and (max-width: 300px)
+{
+  main, #addInfo, #navigation
+  {
+    display: none;
+  }
+
+  h1 
+  {
+    font-size: 50px;
+  }
+
+  footer
+  {
+    font-size: 14px;
+  }
+}
+

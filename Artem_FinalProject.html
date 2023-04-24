@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="main.css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="Description" description="Final Project" content="This is an online GameStore" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tom's Online GameStore</title>
+</head>
+<body>
+  <div id="wrap">
+    <!--'head' of the site-->
+    <header>
+      <h1>Tom GameStore</h1>
+      <!--navigation-->
+      <nav id="navigation">
+        <ul>
+          <li><a href="#storeItemsOuput">Start</a></li>
+          <li><a href="#brands">Categories</a></li>
+          <li><a href="#cart">Cart</a></li>
+          <li><a href="About_Us.html" target="_blank">About Us</a></li>
+        </ul>
+      </nav>
+      <!--curency and time division-->
+      <div id="addInfo">
+        <label for="currency">Select Currency</label>
+        <select id="currency" name="currency" onchange="createItem(aStoreItems);"> 
+          <option value="cad">CAD</option>
+          <option value="usd">USD</option>
+          <option value="gbp">GBP</option>
+        </select>
+        <span>Current Date and Time: <span id="dateTime">00/00/0000 00:00:00</span></span>
+      </div>
+    </header>
+
+    <!--Main section-->
+    <main>
+      <!--start section-->
+      <h2 class="start">Start your Journey here</h2>
+      
+      <section id="storeItemsOuput" class="section"></section>
+      <fieldset class="obj">
+        <legend><strong>WHOLE ASSORTIMENT</strong></legend>
+          <div class="allGames">
+          </div>
+        </fieldset>
+
+      <!--cart section-->
+      <h2 class="cart">Cart</h2>
+        
+      <section id = "cart" class="section"></section>
+      <fieldset>
+        <legend><strong>CART</strong></legend>
+          <div id="buy">
+            <p>
+              Game ID: <input type="text" id="itemId" placeholder="PC005"/>
+            </p>
+            <p>
+              Quantity: <input type="number" min="1" value="1"  id="itemQuantity" oninput="validity.valid||(value='');"/>
+            </p>
+            <p>
+              <input type="button" value="Add to cart" onclick="addToCart();"/>
+              <input type="button" value="Remove from cart" onclick="removeFromCart();" />
+              <input type="button" value="Item Details" onclick="itemDitails();"/>
+              <input type="button" value="Review" onclick="addReview()"/>
+            </p>
+          </div>
+          <div id="cartOutput">
+
+          </div>
+
+          <div id="back"><a href="#storeItemsOuput">Back </a>to the games</div>
+      </fieldset>
+
+      <!--categories section-->
+      <h2 class="categories" onclick="createItem(aStoreItems);">Categories</h2>
+      
+      <section id="brands" class="flex-conteiner">
+        
+        <div class="storeItem">
+          <img src="images\playstation_220x220.jpg" alt="PlayStation" width="220" height="200" onclick="filter('Playstation')">
+          <div class="details">PLAYSTATION</div>
+        </div>
+            
+        <div class="storeItem">
+          <img src="images\Xbox-220x220.jpg" alt="X-BOX" width="220" height="200" onclick="filter('X-box')">
+          <div class="details">X-BOX</div>
+        </div>
+            
+        <div class="storeItem">
+          <img src="images\Nintendo_220x220_3.jpg" alt="Nintendo" width="220" height="200" onclick="filter('Nintendo')">
+          <div class="details">NINTENDO</div>
+        </div>
+          
+        <div class="storeItem">
+          <img src="images\PC_220x220.jpg" alt="PC" width="220" height="200" onclick="filter('PC')">
+          <div class="details">PC</div>
+        </div>
+      </section>
+    </main>
+
+    <!--ending of the page-->
+    <footer>
+      <div>
+        <p>
+          <a href="#navigation">Go to top</a>
+          <br>Front-end Web Development & Javascript Final Requirement by:
+          <a href="mailto:stipnekwow@gmail.com">Artem Stipnek</a>
+        </p>
+      </div>
+    </footer>
+    </div>
+  
+
+  <!--link to js-->
+  <script src="main.js"></script>
+
+
+
+</body>
+</html>
